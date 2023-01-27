@@ -18,6 +18,12 @@ const GameProvider = ({ children }) => {
   const [currentPlayer, setCurrentPlayer] = useState('X');
   const [active, setActive] = useState(true);
   const [gameMessage, setGameMessage] = useState('Game in progress');
+  // function handleClick() {
+  //   console.log('clicked');
+  // }
+  const handleClick = () => {
+    console.log('clicked');
+  };
 
   return (
     <GameContext.Provider
@@ -30,6 +36,7 @@ const GameProvider = ({ children }) => {
         setActive,
         gameMessage,
         setGameMessage,
+        handleClick,
       }}
     >
       {' '}

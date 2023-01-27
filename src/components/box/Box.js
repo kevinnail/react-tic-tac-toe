@@ -5,7 +5,7 @@ import { useContext } from 'react';
 
 export default function Box() {
   const { board } = useContext(GameContext);
-  console.log('board: ', board);
 
-  return <div className="box"></div>;
+  const { handleClick } = useContext(GameContext);
+  return <div onClick={handleClick} className="box"></div>;
 }
