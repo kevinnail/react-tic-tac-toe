@@ -9,7 +9,7 @@ export default function Board() {
   return (
     <div className="board">
       {board.map((box, index) => (
-        <Box key={index} {...{ box }} />
+        <Box key={index} index={index} {...{ box }} />
       ))}
     </div>
   );

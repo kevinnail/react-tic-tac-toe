@@ -5,9 +5,6 @@ import { useContext } from 'react';
 
 function App() {
   const { currentPlayer, active, gameMessage } = useContext(GameContext);
-  console.log('currentPlayer: ', currentPlayer);
-  console.log('active: ', active);
-  console.log('gameMessage: ', gameMessage);
 
   return (
     <div className="App">
