@@ -21,8 +21,9 @@ const GameProvider = ({ children }) => {
   // function handleClick() {
   //   console.log('clicked');
   // }
-  const handleClick = () => {
-    console.log('clicked');
+  const handleClick = ({ space, context }) => {
+    console.log('space', space);
+    console.log('context', context);
   };
   return (
     <GameContext.Provider

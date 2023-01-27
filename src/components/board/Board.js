@@ -8,9 +8,11 @@ export default function Board() {
 
   return (
     <div className="board">
-      {board.map((box, index) => (
-        <Box key={index} index={index} {...{ box }} />
-      ))}
+      {board.map((box) => {
+        console.log('box', box);
+
+        return <Box key={box.space} box={box} />;
+      })}
     </div>
   );
 }
