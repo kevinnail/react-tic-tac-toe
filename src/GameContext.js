@@ -5,13 +5,13 @@ const GameContext = createContext();
 
 const GameProvider = ({ children }) => {
   const [board, setBoard] = useState([
-    { space: 0, context: '' },
+    { space: 0, context: 'X' },
     { space: 1, context: '' },
-    { space: 2, context: '' },
-    { space: 3, context: '' },
+    { space: 2, context: 'O' },
+    { space: 3, context: 'O' },
     { space: 4, context: '' },
     { space: 5, context: '' },
-    { space: 6, context: '' },
+    { space: 6, context: 'X' },
     { space: 7, context: '' },
     { space: 8, context: '' },
   ]);
