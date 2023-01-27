@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Box from '../box/Box.js';
 import './Board.css';
+import { GameContext } from '../../GameContext.js';
+
 export default function Board() {
-  const boardArray = ['', '', '', '', '', '', '', '', ''];
+  const { board } = useContext(GameContext);
 
   return (
     <div className="board">
-      {boardArray.map((box, index) => (
-        <Box key={index} />
+      {board.map((box, index) => (
+        <Box key={index} {...{ box }} />
       ))}
     </div>
   );
