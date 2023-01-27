@@ -1,7 +1,14 @@
 import './App.css';
 import Board from './components/board/Board.js';
+import { GameContext } from './GameContext.js';
+import { useContext } from 'react';
 
 function App() {
+  const { currentPlayer, active, gameMessage } = useContext(GameContext);
+  console.log('currentPlayer: ', currentPlayer);
+  console.log('active: ', active);
+  console.log('gameMessage: ', gameMessage);
+
   return (
     <div className="App">
       <h1>

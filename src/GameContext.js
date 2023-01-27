@@ -15,6 +15,26 @@ const GameProvider = ({ children }) => {
     { space: 7, context: '' },
     { space: 8, context: '' },
   ]);
-  return <GameContext.Provider value={{ board, setBoard }}> {children} </GameContext.Provider>;
+  const [currentPlayer, setCurrentPlayer] = useState('X');
+  const [active, setActive] = useState(true);
+  const [gameMessage, setGameMessage] = useState('Game in progress');
+
+  return (
+    <GameContext.Provider
+      value={{
+        board,
+        setBoard,
+        currentPlayer,
+        setCurrentPlayer,
+        active,
+        setActive,
+        gameMessage,
+        setGameMessage,
+      }}
+    >
+      {' '}
+      {children}{' '}
+    </GameContext.Provider>
+  );
 };
 export { GameContext, GameProvider };
