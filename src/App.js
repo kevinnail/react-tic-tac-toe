@@ -17,7 +17,7 @@ function App() {
         <p> {active ? `Time to make a move, ${currentPlayer}!` : 'Game Over'}</p>
       </ul>
       <p>{gameMessage}</p>
-      <span> {active ? '' : <button onClick={gameReset}>Click to play again</button>}</span>;
+      {active ? '' : <button onClick={gameReset}>Click to play again</button>};
       <main className="main">
         <Board />
       </main>

@@ -17,3 +17,14 @@
   background-color: rgb(47, 0, 255);
   color: white;
 }
+.played {
+  background-color: rgb(98, 0, 255);
+  height: 190px;
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  font-size: 7rem;
+}

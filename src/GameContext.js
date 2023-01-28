@@ -22,6 +22,10 @@ const GameProvider = ({ children }) => {
   );
 
   const handleClick = ({ space, context }) => {
+    const boardSquare = document.getElementById(space);
+    boardSquare.classList.add('played');
+    boardSquare.classList.remove('box');
+
     if (context === 'X' || context === 'O') {
       return;
     } else if (active === false) {
@@ -81,6 +85,12 @@ const GameProvider = ({ children }) => {
     setGameMessage(
       'Game in progress, be quiet so players can concentrate! This is a very serious game! If you are not serious, please at least make jokes about how serious it is!'
     );
+
+    for (let i = 0; i < 9; i++) {
+      const boardSquare = document.getElementById(i);
+      boardSquare.classList.remove('played');
+      boardSquare.classList.add('box');
+    }
   };
 
   return (

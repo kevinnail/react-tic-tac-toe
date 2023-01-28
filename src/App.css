@@ -114,4 +114,5 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  margin: 10px auto;
 }

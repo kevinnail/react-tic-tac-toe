@@ -4,10 +4,10 @@ import { GameContext } from '../../GameContext.js';
 import { useContext } from 'react';
 
 export default function Box({ box }) {
-  const { handleClick } = useContext(GameContext);
+  const { handleClick, active } = useContext(GameContext);
 
   return (
-    <div onClick={() => handleClick(box)} className="box">
+    <div id={box.space} onClick={() => handleClick(box)} className="box">
       {box.context}
     </div>
   );
