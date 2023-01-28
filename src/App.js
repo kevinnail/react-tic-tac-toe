@@ -9,9 +9,14 @@ function App() {
   return (
     <div className="App">
       <h1>
-        Welcome to Tic Tac Toe! The game that as an adult makes you feel sort of dumb if you lose...
-        and not very smart if you win!
+        Welcome to Tic Tac Toe! The game that as an adult makes you feel sort of dumb if you lose... and yet not very
+        smart if you win!
       </h1>
+      <ul className="list">
+        <p> {active ? `YOU GOT THIS` : 'Game Over'}</p>
+        <p> {active ? `Time to make a move, ${currentPlayer}!` : 'Game Over'}</p>
+      </ul>
+      <p>{gameMessage}</p>
       <main className="main">
         <Board />
       </main>
