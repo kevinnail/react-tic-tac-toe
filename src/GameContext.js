@@ -16,25 +16,18 @@ const GameProvider = ({ children }) => {
     { space: 8, context: '' },
   ]);
   const [currentPlayer, setCurrentPlayer] = useState('X');
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   const [gameMessage, setGameMessage] = useState('Game in progress');
-  // function handleClick() {
-  //   console.log('clicked');
-  // }
-  const handleClick = ({ space, context }) => {
-    console.log('context in GameContext click function:', context);
 
+  const handleClick = ({ space, context }) => {
     if (context === 'X' || context === 'O') {
       return;
-    } else if (!active) {
+    } else if (active === false) {
       return;
     } else {
       board[space].context = currentPlayer;
       setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X');
     }
-    console.log('currentPlayer', currentPlayer);
-    console.log('space', space);
-    console.log('context', context);
   };
 
   return (
