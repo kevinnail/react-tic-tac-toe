@@ -43,10 +43,14 @@
   width: 700px;
   height: 700px;
   margin: auto;
+  position: relative;
+  top: -70px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  border-radius: 1rem;
+  box-shadow: 0 0 115px 25px rgba(0, 0, 0, 1);
 }
 
 h1 {
@@ -57,7 +61,7 @@ h1 {
   margin: auto;
   border-radius: 2rem;
   box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
   margin: 10px auto;
   height: 75px;
 }
@@ -83,10 +87,31 @@ p {
   color: rgb(41, 21, 87);
   padding: 20px;
   box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 1);
   border-radius: 3rem;
   padding: 20px;
   min-width: 420px;
   max-width: 1000px;
   margin: 10px auto;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/x\ and\ o.jpg');
+  background-size: cover;
+}
+
+button {
+  width: 250px;
+  height: 120px;
+  background-color: rgb(41, 21, 87);
+  color: rgb(126, 84, 204);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }

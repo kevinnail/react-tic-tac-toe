@@ -64,6 +64,25 @@ const GameProvider = ({ children }) => {
     });
   };
 
+  const gameReset = () => {
+    setBoard([
+      { space: 0, context: '' },
+      { space: 1, context: '' },
+      { space: 2, context: '' },
+      { space: 3, context: '' },
+      { space: 4, context: '' },
+      { space: 5, context: '' },
+      { space: 6, context: '' },
+      { space: 7, context: '' },
+      { space: 8, context: '' },
+    ]);
+    setCurrentPlayer('X');
+    setActive(true);
+    setGameMessage(
+      'Game in progress, be quiet so players can concentrate! This is a very serious game! If you are not serious, please at least make jokes about how serious it is!'
+    );
+  };
+
   return (
     <GameContext.Provider
       value={{
@@ -76,6 +95,7 @@ const GameProvider = ({ children }) => {
         gameMessage,
         setGameMessage,
         handleClick,
+        gameReset,
       }}
     >
       {' '}

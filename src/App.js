@@ -4,7 +4,7 @@ import { GameContext } from './GameContext.js';
 import { useContext } from 'react';
 
 function App() {
-  const { currentPlayer, active, gameMessage } = useContext(GameContext);
+  const { currentPlayer, active, gameMessage, gameReset } = useContext(GameContext);
 
   return (
     <div className="App">
@@ -17,6 +17,7 @@ function App() {
         <p> {active ? `Time to make a move, ${currentPlayer}!` : 'Game Over'}</p>
       </ul>
       <p>{gameMessage}</p>
+      <span> {active ? '' : <button onClick={gameReset}>Click to play again</button>}</span>;
       <main className="main">
         <Board />
       </main>
