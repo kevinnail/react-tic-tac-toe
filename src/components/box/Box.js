@@ -11,8 +11,8 @@ export default function Box({ box }) {
     playedBox.classList.remove('box');
     playedBox.classList.add('played');
   } else {
-    playedBox.classList.remove('played');
-    playedBox.classList.add('box');
+    // playedBox.classList.remove('played');
+    // playedBox.classList.add('box');
   }
   return (
     <div id={box.space} onClick={() => handleClick(box)} className="box">
