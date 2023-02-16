@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Board from './components/board/Board.js';
+import { GameContext } from './GameContext.js';
+import { useContext } from 'react';
 
 function App() {
+  const { currentPlayer, active, gameMessage, gameReset } = useContext(GameContext);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>
+        Welcome to Tic Tac Toe! The game that as an adult makes you feel sort of dumb if you lose... and yet not very
+        smart if you win!
+      </h1>
+      <ul className="list">
+        <p> {active ? `YOU GOT THIS` : 'Game Over'}</p>
+        <p> {active ? `Time to make a move, ${currentPlayer}!` : 'Game Over'}</p>
+      </ul>
+      <p>{gameMessage}</p>
+      {active ? '' : <button onClick={gameReset}>Click to play again</button>};
+      <main className="main">
+        <Board />
+      </main>
     </div>
   );
 }
